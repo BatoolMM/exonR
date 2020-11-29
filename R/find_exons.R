@@ -1,4 +1,14 @@
 # create function to find the exons of any gene in homosapien
+#' Title
+#'
+#' @param gene is a string for the gane Id using RefSeq IDs
+#'
+#' @return a dataframe of the exons, and  their positions within the genome
+#'
+#' @export
+#'
+#' @examples find_exons("NM_000059")
+#'
 find_exons <- function(gene) {
 
   # create ensembl using grch37.ensembl for homosapien
