@@ -7,7 +7,7 @@
 find_exons(gene)
 }
 \arguments{
-\item{gene}{is a string for the gane Id using RefSeq IDs}
+\item{gene}{is a string for the gene using RefSeq IDs}
 }
 \value{
 a dataframe of the exons, and  their positions within the genome
@@ -16,6 +16,7 @@ a dataframe of the exons, and  their positions within the genome
 Title
 }
 \examples{
+e.g. Find the all the exons in BRCA2:
 find_exons("NM_000059")
 
 }

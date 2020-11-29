@@ -1,13 +1,15 @@
 # create function to find the exons of any gene in homosapien
 #' Title
 #'
-#' @param gene is a string for the gane Id using RefSeq IDs
+#' @param gene is a string for the gene using RefSeq IDs
 #'
 #' @return a dataframe of the exons, and  their positions within the genome
 #'
 #' @export
 #'
-#' @examples find_exons("NM_000059")
+#' @examples
+#' e.g. Find the all the exons in BRCA2:
+#' find_exons("NM_000059")
 #'
 find_exons <- function(gene) {
 
