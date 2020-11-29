@@ -16,7 +16,7 @@ a dataframe of the exons, and  their positions within the genome
 Title
 }
 \examples{
-e.g. Find the all the exons in BRCA2:
+
 find_exons("NM_000059")
 
 }

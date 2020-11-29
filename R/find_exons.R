@@ -8,7 +8,7 @@
 #' @export
 #'
 #' @examples
-#' e.g. Find the all the exons in BRCA2:
+#'
 #' find_exons("NM_000059")
 #'
 find_exons <- function(gene) {
