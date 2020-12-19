@@ -1,6 +1,6 @@
 # exonR
 
-exonR is an R package for generating beautiful and customizable plots for the exons and interons of any gene.
+exonR is an R package for generating beautiful and customizable plots for the exons and introns of any gene.
 
 If you find any bugs, have any feature requests or feedback, please submit an issue.
 
