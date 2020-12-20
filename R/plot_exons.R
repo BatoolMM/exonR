@@ -1,4 +1,6 @@
 
+
+
 plot_exons  <- function(exons_df, exon_start, exon_end) {
 
   d = data.frame(
@@ -10,7 +12,7 @@ plot_exons  <- function(exons_df, exon_start, exon_end) {
     label = paste0('Exon ' , seq(1, nrow(exons_df)))
   )
   d %>%
-    ggplot() +
+    ggplot2::ggplot() +
     scale_x_continuous(name = "bp") +
     scale_y_continuous(name = "") +
     geom_hline(yintercept = 1.75) +
