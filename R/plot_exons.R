@@ -1,15 +1,6 @@
 
 plot_exons  <- function(exon_start, exon_end) {
 
-  exons_df <- exons_df %>%
-    rename_all(
-      .funs = function(.x) {
-        .x %>% tolower() %>% str_replace_all(pattern = " |\\)|\\(", replacement = "_")
-      }
-    ) %>%
-    mutate(exon_rank = seq(1, nrow(exons_df))) %>%
-    mutate(exon_length = exon_region_end__bp_ - exon_region_start__bp_)
-
   d = data.frame(
     x1 = exon_start,
     x2 = exon_end,
