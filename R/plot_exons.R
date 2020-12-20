@@ -1,5 +1,5 @@
 
-plot_exons  <- function(exon_start, exon_end) {
+plot_exons  <- function(exons_df, exon_start, exon_end) {
 
   d = data.frame(
     x1 = exon_start,
