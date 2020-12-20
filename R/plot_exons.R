@@ -1,5 +1,7 @@
 
 
+library(ggplot2)
+library(ggrepel)
 
 plot_exons  <- function(exons_df, exon_start, exon_end) {
 
@@ -11,31 +13,40 @@ plot_exons  <- function(exons_df, exon_start, exon_end) {
     t = paste0('Exon ' , seq(1, nrow(exons_df))),
     label = paste0('Exon ' , seq(1, nrow(exons_df)))
   )
+
   d %>%
     ggplot2::ggplot() +
-    scale_x_continuous(name = "bp") +
+    scale_x_continuous(name = "(kbp)", scales::pretty_breaks(n = 8)) +
     scale_y_continuous(name = "") +
-    geom_hline(yintercept = 1.75) +
+    geom_hline(yintercept = 1.6, size=20, alpha = 0.1) +
     geom_rect(
       data = d,
       mapping = aes(
         xmin = x1,
         xmax = x2,
-        ymin = y1,
-        ymax = y2,
-        fill = t
+        ymin = 1.5,
+        ymax = 1.8,
+        label = label
       ),
-      color = "black"
+      color = "black",
+      fill = "#56B4E9"
     ) +
-    geom_text_repel(data = d,
-                    aes(
-                      x = x1 + (x2 - x1) / 2,
-                      y = 2,
-                      label = label
-                    ),
-                    size = 4.5) +
-    ylim(1.5, 7) +
-    xlab("bp") +
+    ggrepel::geom_text_repel(
+      data = d,
+      aes(
+        x = x1 + (x2 - x1) / 2,
+        y = 1.8,
+        label = label,
+      ), size = 10,
+      force_pull   = 0, # do not pull toward data points
+      nudge_y      = 0.05,
+      direction    = "x",
+      angle        = 90,
+      vjust        = 0,
+      segment.size = 0.2,
+    ) +
+    ylim(1.5, 2.2) +
+    xlab("(kbp)") +
     ylab("") +
     theme_bw() +
     theme(
