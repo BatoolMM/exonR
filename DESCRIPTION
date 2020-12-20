@@ -17,4 +17,5 @@ Imports:
     magrittr,
     dplyr,
     biomaRt,
-    ggplot2
+    ggplot2,
+    ggrepel
