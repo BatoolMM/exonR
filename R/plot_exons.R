@@ -5,6 +5,8 @@ library(ggrepel)
 
 plot_exons  <- function(exons_df, exon_start, exon_end) {
 
+  options(repr.plot.width = 70, repr.plot.height = 18)
+
   d = data.frame(
     x1 = exon_start,
     x2 = exon_end,
