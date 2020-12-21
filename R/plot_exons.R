@@ -1,8 +1,5 @@
 
 
-library(ggplot2)
-library(ggrepel)
-
 plot_exons  <- function(exons_df, exon_start, exon_end) {
 
   d = data.frame(
@@ -59,9 +56,6 @@ plot_exons  <- function(exons_df, exon_start, exon_end) {
       axis.text.x = element_text(size = 30),
       axis.ticks.length =  unit(10, "pt"),
       text = element_text(size = 30),
-      panel.border = element_blank()
-    )
-
-  options(repr.plot.width = 70, repr.plot.height = 10)
+      panel.border = element_blank())
 
 }
