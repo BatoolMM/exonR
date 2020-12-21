@@ -18,4 +18,5 @@ Imports:
     dplyr,
     biomaRt,
     ggplot2,
-    ggrepel
+    ggrepel,
+    cowplot
