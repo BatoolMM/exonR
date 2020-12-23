@@ -2,4 +2,5 @@
 
 export("%>%")
 export(find_exons)
+export(plot_exons)
 importFrom(magrittr,"%>%")

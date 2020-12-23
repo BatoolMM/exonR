@@ -48,5 +48,4 @@ find_exons <- function(gene) {
       dplyr::mutate(exon_length = exon_region_end__bp_ - exon_region_start__bp_)
 
   return(exons)
-
 }

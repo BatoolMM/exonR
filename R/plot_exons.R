@@ -1,5 +1,17 @@
 
 
+#' Title
+#'
+#' @param exons_df a dataframe of the exons of a gene,can be calculated with find_exons function
+#' @param exon_start a vector has the start position of the exons
+#' @param exon_end a vector has the end position of the exons
+#'
+#' @return a graph has the introns and exons of a gene
+#' @export
+#'
+#' @examples
+#' BRCA2 <- find_exons("NM_000059")
+#' graph <- plot_exons(BRCA2, BRCA2$exon_region_start__bp_, BRCA2$exon_region_end__bp_)
 plot_exons  <- function(exons_df, exon_start, exon_end) {
 
   d = data.frame(
