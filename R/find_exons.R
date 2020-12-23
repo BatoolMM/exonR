@@ -38,6 +38,15 @@ find_exons <- function(gene) {
     bmHeader = TRUE,
     mart = ensembl
   )
+
+    exons <- exons %>%
+    dplyr::rename_all(
+      .funs = function(.x) {
+        .x %>% tolower() %>% stringr::str_replace_all(pattern = " |\\)|\\(", replacement = "_")
+      }
+    ) %>%
+      dplyr::mutate(exon_length = exon_region_end__bp_ - exon_region_start__bp_)
+
   return(exons)
 
 }
