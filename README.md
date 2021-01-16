@@ -14,7 +14,7 @@ Once you've installed the package, you can load the library in the standard way:
 ```
 library(exonR)
 ```
-Basic usage:
+**Basic usage:**
 ```
 BRCA2 <- find_exons("NM_000059")
 BRCA2
