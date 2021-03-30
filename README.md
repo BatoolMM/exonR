@@ -1,4 +1,5 @@
 # exonR
+[![fair-software.eu](https://img.shields.io/badge/fair--software.eu-%E2%97%8F%20%20%E2%97%8F%20%20%E2%97%8B%20%20%E2%97%8B%20%20%E2%97%8B-orange)](https://fair-software.eu)
 
 exonR is an R package for generating beautiful and customizable plots for the exons and introns of any gene.
 
