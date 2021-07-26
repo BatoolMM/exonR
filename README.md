@@ -33,3 +33,6 @@ graph <- plot_exons(BRCA2, BRCA2$exon_region_start__bp_, BRCA2$exon_region_end__
 <p align="center">
   <img src="imgs/BRCA2.jpg">
 </p>
+
+### TODO:
+- FAIRfication of the package
